@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "version": "1.0",
+  "id": "7a96f29f-21bc-4e37-a2e3-dc222e25fc32",
+  "packageName": "com.microsoft.teams.samples",
+  "developer": {
+    "name": "ClickView",
+    "websiteUrl": "https://online.clickview.com.au/",
+    "privacyUrl": "https://www.clickview.com.au/privacy-policy",
+    "termsOfUseUrl": "https://www.clickview.com.au/clickview-online-terms"
+  },
+  "name": {
+    "short": "ClickView"
+  },
+  "description": {
+    "short": "Embed a ClickView video",
+    "full": "<write some description of what clickview is here>"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon.png"
+  },
+  "accentColor": "#FFFFFF",
+  "composeExtensions": [
+    {
+      "botId": "7a96f29f-21bc-4e37-a2e3-dc222e25fc32",
+      "canUpdateConfiguration": true,
+      "commands": [
+        {
+          "id": "clickview",
+          "description": "Search for a video",
+          "title": "Search for a video",
+          "type": "action",
+          "context": [ "compose", "commandBox" ],
+          "fetchTask": false,
+          "taskInfo": {
+            "title": "Task Test",
+            "width": "large",
+            "height": "large",
+            "url": "https://online.clickview.com.au/v3/plugins/base?consumerKey=60d47cd387d5"
+          }
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity"
+  ],
+  "validDomains": [
+    "online.clickview.com.au"
+  ]
+}
